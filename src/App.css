@@ -59,85 +59,85 @@
   
 /* OrderBody */
 .order-body {
-    width: 532px;
-    height: 1340.63px;
-    margin: 50px auto;
-    padding: 30px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .order-body h2 {
-    color: #292929;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 10px;
-  }
-  
-  .order-body p {
-    color: #CE2829;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  /* Boyut ve Hamur Seçimi */
-  .order-body .row {
-    margin-bottom: 20px;
-  }
-  
-  .order-body .order-summary {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-top: 20px;
-  }
-  
-  .order-body .quantity {
-    font-size: 18px;
-    font-weight: bold;
-    color: #292929;
-  }
-  
-  .card {
-    border: none;
-    background-color: #FAF7F2;
-  }
-  
-  .card-title {
-    font-size: 18px;
-    font-weight: bold;
-    color: #292929;
-  }
-  
-  .card-text {
-    font-size: 16px;
-    color: #5F5F5F;
-  }
-  
-  button {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: bold;
-    border: none;
-    border-radius: 30px;
-  }
-  
-  button:hover {
-    opacity: 0.9;
-  }
-  
-  button:active {
-    transform: scale(0.98);
-  }
-  
-  button[color="warning"] {
-    background-color: #FDC913;
-    color: black;
-  }
-  
-  button[color="warning"]:hover {
-    background-color: #e6b011;
-  }
+  width: 532px;
+  height: 1340.63px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.order-body h2 {
+  color: #292929;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.order-body p {
+  color: #CE2829;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Boyut ve Hamur Seçimi */
+.order-body .row {
+  margin-bottom: 20px;
+}
+
+.order-body .order-summary {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.order-body .quantity {
+  font-size: 18px;
+  font-weight: bold;
+  color: #292929;
+}
+
+.card {
+  border: none;
+  background-color: #FAF7F2;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #292929;
+}
+
+.card-text {
+  font-size: 16px;
+  color: #5F5F5F;
+}
+
+button {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button[color="warning"] {
+  background-color: #FDC913;
+  color: black;
+}
+
+button[color="warning"]:hover {
+  background-color: #e6b011;
+}

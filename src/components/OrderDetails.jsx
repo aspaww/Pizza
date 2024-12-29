@@ -12,6 +12,7 @@ import {
   CardTitle,
   CardText,
 } from 'reactstrap';
+import axios from 'axios'; 
 import '../App.css';
 
 export default function OrderBody() {
@@ -21,12 +22,12 @@ export default function OrderBody() {
   const [siparisNotu, setSiparisNotu] = useState('');
   const [siparisMiktari, setSiparisMiktari] = useState(1);
   const [butonAktifMi, setButonAktifMi] = useState(false);
+  const [formDisabled, setFormDisabled] = useState(false);
 
   useEffect(() => {
-    // Butonun aktif olabilmesi için aşağıdaki şartların hepsinin sağlanması gerekir:
     const malzemeSecimiGeçerliMi = seciliMalzemeler.length >= 4 && seciliMalzemeler.length <= 10;
     const boyutSecimiGeçerliMi = seciliBoyut !== '';
-    const hamurSecimiGeçerliMi = seciliHamur !== ''; // Hamur seçilmeden buton aktif olmasın
+    const hamurSecimiGeçerliMi = seciliHamur !== ''; 
 
     if (malzemeSecimiGeçerliMi && boyutSecimiGeçerliMi && hamurSecimiGeçerliMi) {
       setButonAktifMi(true);
@@ -53,8 +54,32 @@ export default function OrderBody() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Sipariş verildiğinde yapılacak işlemler
-    alert('Sipariş Verildi!');
+
+
+    setFormDisabled(true);
+
+    const siparisData = {
+      boyut: seciliBoyut,
+      hamur: seciliHamur,
+      malzemeler: seciliMalzemeler,
+      siparisNotu,
+      siparisMiktari
+    };
+
+    // API'ye gönderim
+    axios
+      .post('https://reqres.in/api/pizza', siparisData)
+      .then((response) => {
+        console.log('API Response:', response.data); 
+        alert('Sipariş başarıyla verildi!'); 
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+        alert('Bir hata oluştu. Lütfen tekrar deneyin.');
+      })
+      .finally(() => {
+        setFormDisabled(false); 
+      });
   };
 
   return (
@@ -62,14 +87,14 @@ export default function OrderBody() {
       <h2 className="text-center">Position Absolute Acı Pizza</h2>
       <p className="text-center">85.50₺</p>
       <Row className="justify-content-center">
-        <Col md={8}>
+        <Col>
           <Form onSubmit={handleSubmit}>
             {/* Boyut Seç */}
             <FormGroup tag="fieldset">
               <legend>Boyut Seç *</legend>
               <Row>
                 {['Küçük', 'Orta', 'Büyük'].map((boyutSecenek, index) => (
-                  <Col md={4} key={index}>
+                  <Col key={index}>
                     <FormGroup check>
                       <Label check>
                         <Input
@@ -78,6 +103,7 @@ export default function OrderBody() {
                           value={boyutSecenek}
                           checked={seciliBoyut === boyutSecenek}
                           onChange={handleBoyutDegistir}
+                          disabled={formDisabled}
                         />{' '}
                         {boyutSecenek}
                       </Label>
@@ -95,6 +121,7 @@ export default function OrderBody() {
                 id="hamurSelect"
                 value={seciliHamur}
                 onChange={handleHamurDegistir}
+                disabled={formDisabled}
               >
                 <option value="">Hamur Kalınlığı Seçin</option>
                 <option value="İnce">İnce</option>
@@ -123,7 +150,7 @@ export default function OrderBody() {
                   'Soğan',
                   'Sarımsak',
                 ].map((malzeme, index) => (
-                  <Col md={4} key={index}>
+                  <Col key={index}>
                     <FormGroup check>
                       <Label check>
                         <Input
@@ -131,7 +158,7 @@ export default function OrderBody() {
                           value={malzeme}
                           checked={seciliMalzemeler.includes(malzeme)}
                           onChange={handleMalzemeDegistir}
-                          disabled={seciliMalzemeler.length >= 10 && !seciliMalzemeler.includes(malzeme)} // En fazla 10 malzeme seçilebilir
+                          disabled={formDisabled || seciliMalzemeler.length >= 10 && !seciliMalzemeler.includes(malzeme)} 
                         />{' '}
                         {malzeme}
                       </Label>
@@ -150,27 +177,28 @@ export default function OrderBody() {
                 placeholder="Siparişine eklemek istediğin bir not var mı?"
                 value={siparisNotu}
                 onChange={handleSiparisNotuDegistir}
+                disabled={formDisabled}
               />
             </FormGroup>
 
             {/* Sipariş Özeti ve Toplam */}
             <Row>
-              <Col md={6}>
+              <Col>
                 <div className="order-summary">
                   <Button
                     color="warning"
                     onClick={() => handleMiktarDegistir(-1)}
-                    disabled={siparisMiktari === 1}
+                    disabled={siparisMiktari === 1 || formDisabled}
                   >
                     -
                   </Button>
                   <span className="quantity">{siparisMiktari}</span>
-                  <Button color="warning" onClick={() => handleMiktarDegistir(1)}>
+                  <Button color="warning" onClick={() => handleMiktarDegistir(1)} disabled={formDisabled}>
                     +
                   </Button>
                 </div>
               </Col>
-              <Col md={6}>
+              <Col>
                 <Card>
                   <CardBody>
                     <CardTitle>Sipariş Toplamı</CardTitle>
@@ -187,7 +215,7 @@ export default function OrderBody() {
                 color="warning"
                 className="px-5 py-3"
                 type="submit"
-                disabled={!butonAktifMi}
+                disabled={!butonAktifMi || formDisabled} 
                 style={{ backgroundColor: '#FDC913' }}
               >
                 SİPARİŞ VER
