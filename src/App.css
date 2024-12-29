@@ -1,42 +1,143 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Homde Hader*/
+.header {
+    background-size: cover;
+    background-position: center; 
+    width: 1920px;
+    height: 945px;
+    color: white; 
   }
-  to {
-    transform: rotate(360deg);
+  
+  .header-content {
+    font-family: 'Barlow', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0px; /* Elemanlar arasındaki boşluğu ayarlar */
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  
+  .header-content h1 {
+    font-family: "Roboto Condensed", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    margin-bottom: 0px; /* Alt boşluğu ayarlar */
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
+  
+  .header-content p {
+    font-family: "Barlow", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 80px;
+    margin-bottom: 0px; /* Alt boşluğu ayarlar */
+  }
+  
+  .header-content Button {
+    background-color: #FDC913;
+    border-radius: 30px;
+    height: 50px;
+    width: 150px;
+    color: black;
+    font-weight: bold;
+    margin-top: 0px; /* Üst boşluğu ayarlar */
+  }
+  .order-header {
+    width: 1920px; /* Header genişliği tüm ekran */
+    height: 207px; /* Header yüksekliği */
+    background-color: #CE2829; /* Kırmızı arka plan */
+    display: flex;
+    align-items:center; /* Dikey ortalama */
+    justify-content: center; /* Yatay ortalama */
+  }
+  
+  .order-header h1 {
+    font-family: 'Roboto Condensed', sans-serif; 
+    font-size: 48px; 
+    color: white; 
+    margin: 0; 
+  }
+  
+/* OrderBody */
+.order-body {
+    width: 532px;
+    height: 1340.63px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .order-body h2 {
+    color: #292929;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .order-body p {
+    color: #CE2829;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Boyut ve Hamur Seçimi */
+  .order-body .row {
+    margin-bottom: 20px;
+  }
+  
+  .order-body .order-summary {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .order-body .quantity {
+    font-size: 18px;
+    font-weight: bold;
+    color: #292929;
+  }
+  
+  .card {
+    border: none;
+    background-color: #FAF7F2;
+  }
+  
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #292929;
+  }
+  
+  .card-text {
+    font-size: 16px;
+    color: #5F5F5F;
+  }
+  
+  button {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  
+  button:active {
+    transform: scale(0.98);
+  }
+  
+  button[color="warning"] {
+    background-color: #FDC913;
+    color: black;
+  }
+  
+  button[color="warning"]:hover {
+    background-color: #e6b011;
+  }
