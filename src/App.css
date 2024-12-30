@@ -57,87 +57,113 @@
     margin: 0; 
   }
   
-/* OrderBody */
-.order-body {
+/* OrderDetails CSS */
+.order-details {
   width: 532px;
-  height: 1340.63px;
-  margin: 50px auto;
-  padding: 30px;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 1340px; /* 532x1340 ebatlarına göre ayarlandı */
+  background-color: #faf7f2; /* Bej arka plan */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: flex-start; /* Elemanları yukarıya hizalayacak */
+  margin: 0 auto; /* Yatayda ortalamak için margin: 0 auto ekleniyor */
 }
 
-.order-body h2 {
-  color: #292929;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.order-body p {
-  color: #CE2829;
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
+.order-details .pizza-info {
   text-align: center;
 }
 
-/* Boyut ve Hamur Seçimi */
-.order-body .row {
-  margin-bottom: 20px;
-}
-
-.order-body .order-summary {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.order-body .quantity {
-  font-size: 18px;
-  font-weight: bold;
-  color: #292929;
-}
-
-.card {
-  border: none;
-  background-color: #FAF7F2;
-}
-
-.card-title {
-  font-size: 18px;
-  font-weight: bold;
-  color: #292929;
-}
-
-.card-text {
-  font-size: 16px;
-  color: #5F5F5F;
-}
-
-button {
+.order-details .pizza-name {
   font-family: 'Roboto Condensed', sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  color: #292929; /* Koyu gri */
+}
+
+.order-details .pizza-price {
+  font-family: 'Barlow', sans-serif;
+  font-size: 20px;
+  color: #FDC913; /* Sarı */
+  margin-top: 5px;
+}
+
+.order-details .size-crust,
+.order-details .toppings,
+.order-details .note,
+.order-details .quantity-summary {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.order-details .size-crust,
+.order-details .toppings {
+  width: 100%;
+}
+
+.order-details .note {
+  width: 100%;
+}
+
+.order-details .quantity-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-details .quantity-summary > div {
+  width: 100%;
+}
+
+.order-details button {
+  margin-top: 20px;
+  width: auto; /* Otomatik genişlik */
+  background-color: #fdc913;
   font-weight: bold;
+  border-radius: 5px;
+  padding: 10px 20px; /* Yalnızca yazı kadar iç boşluk */
+  font-size: 16px;
+  display: inline-block; /* Butonun yazıya göre boyutlandırılmasını sağlar */
   border: none;
-  border-radius: 30px;
 }
 
-button:hover {
-  opacity: 0.9;
+.order-details p {
+  font-family: 'Barlow', sans-serif;
+  font-size: 20px;
+  margin-top: 20px;
+  text-align: center;
 }
 
-button:active {
-  transform: scale(0.98);
+/* OrderPage container ortalama */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Sayfayı tam olarak ortalar */
+  padding: 0;
 }
 
-button[color="warning"] {
-  background-color: #FDC913;
+/* Sayfanın ortalanması */
+body, html {
+  height: 100%;
+  margin: 0;
+}
+/* Sipariş Ver butonunun aktif değilken durumu */
+.order-details button:disabled {
+  background-color: #f5f5f5;  /* Gri arka plan */
+  color: #b0b0b0;  /* Gri yazı */
+  cursor: not-allowed;  /* Tıklanamaz imleç */
+}
+
+/* Sipariş Ver butonunun aktifken durumu */
+.order-details button {
+  background-color: #FDC913;  /* Sarı arka plan */
   color: black;
+  cursor: pointer;  /* Tıklanabilir imleç */
 }
 
-button[color="warning"]:hover {
-  background-color: #e6b011;
+/* Üzerine gelindiğinde (hover) aktif buton stilini */
+.order-details button:hover {
+  background-color: #e5c600;  /* Hover sırasında sarının koyulaşması */
 }
