@@ -1,11 +1,10 @@
-// src/components/Order/OrderToppings.jsx
 import React from 'react';
 import { FormGroup, Label, Input } from 'reactstrap';
 
 const OrderToppings = ({ seciliMalzemeler, setSeciliMalzemeler }) => {
   const malzemeListesi = [
-    'Pepperoni', 'Domates', 'Biber', 'Sosis', 'Mısır',
-    'Sucuk', 'Kanada Jambonu', 'Ananas', 'Tavuk Parça', 'Jalapeno','Domuz Pastırması','Yeşil Zeytin'
+    'Pepperoni', 'Domates', 'Biber', 'Sosis', 'Mısır','3 Çeşit peynir','Jalepone','Kırmızı biber',
+    'Sucuk', 'Kanada Jambonu', 'Ananas', 'Tavuk Parça', 'Jalapeno', 'Domuz Pastırması', 'Yeşil Zeytin'
   ];
 
   const handleMalzemeDegistir = (event) => {
@@ -15,33 +14,27 @@ const OrderToppings = ({ seciliMalzemeler, setSeciliMalzemeler }) => {
     );
   };
 
-  // Malzeme limitini kontrol et
-  const maxMalzemeLimit = 10;
-  const isMaxMalzemeSelected = seciliMalzemeler.length >= maxMalzemeLimit;
-
-  // En az 4 malzeme seçilmesi gerekiyor
-  const isMinMalzemeSelected = seciliMalzemeler.length >= 4;
-
   return (
-    <FormGroup>
-      <legend>Ek Malzemeler</legend>
-      <div>
+    <FormGroup className="order-toppings">
+      <legend className="order-toppings-legend">Ek Malzemeler</legend>
+      <p>En Fazla 10 Malzeme Seçebilirsiniz.</p>
+      <div className="toppings-options">
         {malzemeListesi.map((malzeme, index) => (
-          <FormGroup check key={index}>
-            <Label check>
+          <FormGroup check key={index} className="topping-option">
+            <Label check className="topping-label">
               <Input
+                className="topping-checkbox"
                 type="checkbox"
                 value={malzeme}
                 checked={seciliMalzemeler.includes(malzeme)}
                 onChange={handleMalzemeDegistir}
-                disabled={isMaxMalzemeSelected && !seciliMalzemeler.includes(malzeme)} // Seçim limiti aşıldığında diğerlerini disabled yap
-              />{' '}
+                disabled={seciliMalzemeler.length >= 10 && !seciliMalzemeler.includes(malzeme)}
+              />
               {malzeme}
             </Label>
           </FormGroup>
         ))}
       </div>
-      {!isMinMalzemeSelected && <p style={{ color: 'red' }}>En az 4 malzeme seçmeniz gerekiyor!</p>}
     </FormGroup>
   );
 };
