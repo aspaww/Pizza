@@ -89,7 +89,6 @@ const OrderDetails = () => {
         Sipariş Ver
       </Button>
 
-      <p>Toplam Fiyat: {fiyat * siparisMiktari} TL</p>
     </div>
   );
 };
