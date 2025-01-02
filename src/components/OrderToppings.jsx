@@ -1,5 +1,7 @@
 import React from 'react';
 import { FormGroup, Label, Input } from 'reactstrap';
+import '../App.css';
+
 
 const OrderToppings = ({ seciliMalzemeler, setSeciliMalzemeler }) => {
   const malzemeListesi = [

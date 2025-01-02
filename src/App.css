@@ -268,42 +268,7 @@ button:disabled {
 
 
 
-/* Succes Page    */
 
-
-.success-page {
-  background-color: #CE2829; /* Kırmızı arka plan */
-  height: 100vh; /* Sayfanın tüm yüksekliğini kaplar */
-  color: white; /* Yazı rengini beyaz yapar */
-  display: flex;
-  flex-direction: column;
-
-}
-
-.success-page h1 {
-  font-family: "Roboto Condensed", serif;
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-top: 6rem;
-
-
-}
-.success-page p {
-  font-family: "Roboto Condensed", serif;
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-top: 20rem;
-}
 .categories{
   height:94px;
   display: flex;
@@ -608,3 +573,99 @@ button:disabled {
   font-size: 14px;
   color: #666;
 }
+/* Succes Page    */
+
+
+.success-page {
+  background-color: #CE2829; /* Kırmızı arka plan */
+  height: 100vh; /* Sayfanın tüm yüksekliğini kaplar */
+  color: white; /* Yazı rengini beyaz yapar */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: "Barlow", serif;
+
+}
+
+
+.success-page h1 {
+  font-family: "Roboto Condensed", serif;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 6rem;
+
+
+}
+.success-page h2{
+  font-family: 'Barlow', sans-serif;
+  font-size: 5rem;
+  font-weight:lighter;
+  margin-bottom: 20px;
+  margin-top: 6rem;
+
+
+}
+
+.success-page-order {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.success-page hr{
+  width:50%;
+  margin-top: 5rem;
+  margin-bottom: 6rem;
+}
+.succes-page-price{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-style: solid;
+  border-width:0.3px;
+  width: 25%;
+  margin-left: 38%;
+  margin-top: 5rem;
+}
+
+/* Checkbox'ın normal durumu */
+.topping-checkbox {
+  appearance: none; /* Tarayıcı varsayılan stilini kaldırır */
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+
+/* Checkbox seçildiğinde */
+.topping-checkbox:checked {
+  background-color: #FDC913; /* Sarı arka plan */
+  border-color: #FDC913;
+}
+
+/* Checkbox seçildiğinde tik işareti */
+.topping-checkbox:checked::after {
+  content: '✔'; /* Tik işareti */
+  color: #000; /* Siyah tik */
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+
+

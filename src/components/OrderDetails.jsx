@@ -10,7 +10,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';  // navigate importu
 
 const OrderDetails = () => {
-  const navigate = useNavigate();  // navigate kullanımı
+  const navigate = useNavigate();
   const {
     seciliBoyut,
     setSeciliBoyut,
@@ -33,14 +33,16 @@ const OrderDetails = () => {
       hamur: seciliHamur,
       malzemeler: seciliMalzemeler.join(", "),
       siparisMiktari,
-      siparisNotu
+      siparisNotu,
+      fiyat,
     };
-
+  
     try {
       const response = await axios.post('https://reqres.in/api/pizza', orderData);
       console.log("Sipariş Özeti:", response.data);
-      // Sipariş başarılı olduğunda SuccessPage'e yönlendirme yapıyoruz
-      navigate('/success');  // 'success' sayfasına yönlendiriyoruz
+  
+
+      navigate('/success', { state: response.data });
     } catch (error) {
       console.error("Sipariş gönderilemedi:", error);
     }
