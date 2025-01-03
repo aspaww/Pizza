@@ -1,7 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import '../App.css';
-import useOrderDetails from '../hooks/useOrderDetails';
+import '../../App.css';
 
 const SuccessPage = () => {
   const location = useLocation();

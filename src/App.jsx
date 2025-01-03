@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import HomePage from './components/HomaPage'; // 'HomePage' bileşeninin doğru import edilmesi
-import OrderPage from './components/OrderPage';
-import SuccessPage from './components/SuccessPage';  // SuccessPage'i import ediyoruz
+import HomePage from '../src/components/home/HomaPage'; // 'HomePage' bileşeninin doğru import edilmesi
+import OrderPage from './components/order/OrderPage';
+import SuccessPage from './components/succes/SuccessPage';  // SuccessPage'i import ediyoruz
 import './App.css';
 
 export default function App() {

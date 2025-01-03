@@ -1,11 +1,11 @@
 import React from 'react';
-import { Button, FormGroup } from 'reactstrap';
+import { Button, FormGroup, Input } from 'reactstrap';
 import OrderSize from './OrderSize';
 import OrderCrust from './OrderCrust';
 import OrderToppings from './OrderToppings';
 import OrderSummary from './OrderSummary';
-import useOrderDetails from '../hooks/useOrderDetails';
-import useOrderValidation from '../hooks/useOrderValidation';
+import useOrderDetails from '../../hooks/useOrderDetails';
+import useOrderValidation from '../../hooks/useOrderValidation';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';  // navigate importu
 
@@ -22,7 +22,9 @@ const OrderDetails = () => {
     siparisMiktari,
     siparisNotu,
     setSiparisNotu,
-    handleSiparisMiktariDegistir
+    handleSiparisMiktariDegistir,
+    isim,
+    setIsim
   } = useOrderDetails();
 
   const { isOrderButtonDisabled } = useOrderValidation(seciliBoyut, seciliHamur, seciliMalzemeler);
@@ -35,6 +37,7 @@ const OrderDetails = () => {
       siparisMiktari,
       siparisNotu,
       fiyat,
+      isim
     };
   
     try {
@@ -61,6 +64,18 @@ const OrderDetails = () => {
       <OrderSize seciliBoyut={seciliBoyut} setSeciliBoyut={setSeciliBoyut} />
       <OrderCrust seciliHamur={seciliHamur} setSeciliHamur={setSeciliHamur} />
       <OrderToppings seciliMalzemeler={seciliMalzemeler} setSeciliMalzemeler={setSeciliMalzemeler} />
+
+      <FormGroup className="order-name">
+        <label htmlFor="order-name">Ad Soyad</label>
+        <Input
+          type="text"
+          id="order-name"
+          name="order-name"
+          placeholder="Adınızı ve soyadınızı girin"
+          value={isim}
+          onChange={(e) => setIsim(e.target.value)}
+        />
+      </FormGroup>
 
       <FormGroup className="order-note">
         <label htmlFor="order-note">Sipariş Notu</label>

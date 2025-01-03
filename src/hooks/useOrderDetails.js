@@ -2,13 +2,14 @@ import { useState } from 'react';
 
 const useOrderDetails = () => {
   // Boyut, Hamur, ve Malzeme seçeneklerinin state'leri
-  const [seciliBoyut, setSeciliBoyut] = useState('Orta');  // Varsayılan boyut Orta
-  const [seciliHamur, setSeciliHamur] = useState('İnce');  // Varsayılan hamur İnce
+  const [seciliBoyut, setSeciliBoyut] = useState('Orta'); 
+  const [seciliHamur, setSeciliHamur] = useState('İnce'); 
   const [seciliMalzemeler, setSeciliMalzemeler] = useState([]);
   const [siparisMiktari, setSiparisMiktari] = useState(1);
-  const [siparisNotu, setSiparisNotu] = useState(''); // Sipariş notu state'i
+  const [siparisNotu, setSiparisNotu] = useState(''); 
+  const [isim,setIsim] =useState([]);
 
-  // Fiyat hesaplamak için boyutlar ve hamurların fiyatları
+
   const fiyatlar = {
     boyutlar: {
       Küçük: 25,
@@ -20,17 +21,17 @@ const useOrderDetails = () => {
       Orta: 7,
       Kalın: 9
     },
-    ekMalzeme: 5 // Her ek malzeme için 5 TL
+    ekMalzeme: 5 
   };
 
-  // Fiyat hesaplama - Boyut, Hamur ve Ek Malzeme ücretini dahil ediyoruz
+
   const fiyat = (fiyatlar.boyutlar[seciliBoyut] || 0) 
                + (fiyatlar.hamurlar[seciliHamur] || 0)
-               + (seciliMalzemeler.length * fiyatlar.ekMalzeme); // Ek malzemeler için ücret ekleniyor
+               + (seciliMalzemeler.length * fiyatlar.ekMalzeme); 
 
-  // Sipariş miktarını değiştirme fonksiyonu
+
   const handleSiparisMiktariDegistir = (deger) => {
-    if (siparisMiktari + deger >= 1) { // Miktar 1'den az olmasın
+    if (siparisMiktari + deger >= 1) { 
       setSiparisMiktari(siparisMiktari + deger);
     }
   };
@@ -47,7 +48,9 @@ const useOrderDetails = () => {
     setSiparisMiktari,
     siparisNotu,  
     setSiparisNotu,
-    handleSiparisMiktariDegistir
+    handleSiparisMiktariDegistir,
+    isim,
+    setIsim
   };
 };
 

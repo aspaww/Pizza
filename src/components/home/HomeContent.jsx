@@ -1,19 +1,19 @@
 import React from "react";
-import '../App.css'
+import '../../App.css'
 
 // Images
-import kart1 from "../../images/iteration-2-images/cta/kart-1.png";
-import kart2 from "../../images/iteration-2-images/cta/kart-2.png";
-import kart3 from "../../images/iteration-2-images/cta/kart-3.png";
-import pizzaIcon from "../../images/iteration-2-images/icons/2.svg";
-import burgerIcon from "../../images/iteration-2-images/icons/3.svg";
-import ramenIcon from "../../images/iteration-2-images/icons/1.svg";
-import fastFoodIcon from "../../images/iteration-2-images/icons/4.svg";
-import softDrinkIcon from "../../images/iteration-2-images/icons/5.svg";
-import drinkIcon from "../../images/iteration-2-images/icons/6.svg";
-import food1 from "../../images/iteration-2-images/pictures/food-1.png";
-import food2 from "../../images/iteration-2-images/pictures/food-2.png";
-import food3 from "../../images/iteration-2-images/pictures/food-3.png";
+import kart1 from "../../../images/iteration-2-images/cta/kart-1.png";
+import kart2 from "../../../images/iteration-2-images/cta/kart-2.png";
+import kart3 from "../../../images/iteration-2-images/cta/kart-3.png";
+import pizzaIcon from "../../../images/iteration-2-images/icons/2.svg";
+import burgerIcon from "../../../images/iteration-2-images/icons/3.svg";
+import ramenIcon from "../../../images/iteration-2-images/icons/1.svg";
+import fastFoodIcon from "../../../images/iteration-2-images/icons/4.svg";
+import softDrinkIcon from "../../../images/iteration-2-images/icons/5.svg";
+import drinkIcon from "../../../images/iteration-2-images/icons/6.svg";
+import food1 from "../../../images/iteration-2-images/pictures/food-1.png";
+import food2 from "../../../images/iteration-2-images/pictures/food-2.png";
+import food3 from "../../../images/iteration-2-images/pictures/food-3.png";
 
 const HomeContent = () => {
   return (

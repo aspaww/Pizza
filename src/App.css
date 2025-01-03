@@ -2,8 +2,8 @@
 .header {
   background-size: cover;
   background-position: center; 
-  width: 100%; /* Genişliği yüzde olarak ayarladık */
-  height: 945px; /* Sabit yükseklik */
+  width: 100%; 
+  height: 945px; 
   color: white; 
 }
 
@@ -13,7 +13,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0px; /* Elemanlar arasındaki boşluğu ayarlar */
+  gap: 0px; 
 }
 
 .header-content h1 {
@@ -21,7 +21,7 @@
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-  margin-bottom: 0px; /* Alt boşluğu ayarlar */
+  margin-bottom: 0px; 
 }
 
 .header-content p {
@@ -29,7 +29,7 @@
   font-weight: 400;
   font-style: normal;
   font-size: 80px;
-  margin-bottom: 0px; /* Alt boşluğu ayarlar */
+  margin-bottom: 0px; 
 }
 
 .header-content Button {
@@ -39,27 +39,26 @@
   width: 150px;
   color: black;
   font-weight: bold;
-  margin-top: 0px; /* Üst boşluğu ayarlar */
+  margin-top: 0px; 
 }
 
 .order-header {
-  width: 100%; /* Genişliği yüzde olarak ayarladık */
-  height: 207px; /* Sabit yükseklik */
-  background-color: #CE2829; /* Kırmızı arka plan */
+  width: 100%; 
+  height: 207px; 
+  background-color: #CE2829; 
   display: flex;
-  align-items: center; /* Dikey ortalama */
-  justify-content: center; /* Yatay ortalama */
+  align-items: center; 
+  justify-content: center; 
 }
 
 .order-header h1 {
   font-family: 'Roboto Condensed', sans-serif; 
-  font-size: 4vw; /* Font boyutunu orantılı yapıyoruz */
+  font-size: 4vw; 
   color: white; 
   margin: 0; 
 }
 /* OrderDetails CSS */
-/* Sayfanın ortalanması */
-/* 1. pizza-info div'inin en üstte yer alması */
+
 body, html {
   height: 100%;
   margin: 0;
@@ -68,16 +67,16 @@ body, html {
 .order-details {
   width: 532px;
   height: 1340px;
-  margin: 0 auto; /* Ortalanmasını sağlar */
+  margin: 0 auto; 
 }
 .pizza-info {
   position: relative;
-  margin-top: 0; /* Sayfanın üst kısmına yerleştirilmesi */
-  padding: 10px 0; /* İçeriklerin üst kısmına biraz boşluk ekliyoruz */
+  margin-top: 0; 
+  padding: 10px 0; 
   font-size: 1.3rem;
 }
 
-/* 2. pizza-name, pizza-price, pizza-description alt alta sıralanacak */
+
 .pizza-name{
   display: block;
   margin-top: 30px;
@@ -93,43 +92,41 @@ body, html {
 
 }
 .pizza-description {
-  display: block; /* Her bir öğe alt alta sıralanacak */
-  margin-bottom: 40px; /* Öğeler arasına boşluk ekliyoruz */
-  font-weight: 400; /* Regular weight */
-  font-family: 'Roboto Condensed', sans-serif; /* Yazı tipi Roboto Condensed */
-  color: rgba(0, 0, 0, 0.5); /* Soluk gri renk (yarı şeffaf siyah) */
+  display: block; 
+  margin-bottom: 40px; 
+  font-weight: 400;
+  font-family: 'Roboto Condensed', sans-serif; 
+  color: rgba(0, 0, 0, 0.5); 
 }
 
-/* 3. order-size-fieldset ve order-crust-form-group yan yana olacak */
+
 .order-size-fieldset{
   display: inline-block;
   width: 30%;
 }
 .order-crust-form-group {
-  display: inline-block; /* Öğeleri yan yana hizalamak için */
-  width: 38%; /* Genişliklerini ayarlıyoruz */
+  display: inline-block; 
+  width: 38%; 
   
 }
 
 .order-size-fieldset {
-  text-align: left; /* Sol tarafa yaslanacak */
+  text-align: left; 
   font-family: 'Roboto Condensed', sans-serif;
   
 }
 
 .order-crust-form-group {
-  text-align: right; /* Sağ tarafa yaslanacak */
+  text-align: right;
   font-family: 'Roboto Condensed', sans-serif;
   
 }
 
-/* 4. order-toppings FormGroup büyütülmüş checkbox'larla */
-/* Ek malzeme radio butonlarını yana yana dizmek */
-/* Ek malzeme checkbox'larını 3 sütun düzeniyle yerleştiriyoruz */
-/* Ek malzeme checkbox'larını 3 sütunlu bir yapıda düzenliyoruz */
+
+
 .order-toppings {
   display: flex;
-  flex-direction: column; /* Vertikal hizalama */
+  flex-direction: column; 
   gap: 20px;
   margin-top: 2.5rem;
   font-family: 'Roboto Condensed', sans-serif;
@@ -144,85 +141,117 @@ body, html {
 
 .toppings-options {
   display: flex;
-  flex-wrap: wrap; /* Öğeleri satırlara saracak */
-  gap: 15px; /* Öğeler arasına boşluk ekliyoruz */
+  flex-wrap: wrap; 
+  gap: 15px; 
   font-family: 'Roboto Condensed', sans-serif;
 }
 
 .topping-option {
-  flex: 1 0 30%; /* Her checkbox için 3 sütun oluşturuyoruz */
+  flex: 1 0 30%; 
   display: flex;
   align-items: center;
-  margin-bottom: 10px; /* Her öğe arasına mesafe ekliyoruz */
+  margin-bottom: 10px; 
   font-family: 'Roboto Condensed', sans-serif;
 }
 
 .topping-checkbox {
-  margin-right: 10px; /* Checkbox ile metin arasına boşluk ekliyoruz */
+  margin-right: 10px; 
   font-family: 'Roboto Condensed', sans-serif;
 }
 
 .order-toppings input[type="checkbox"] {
-  width: 20px; /* Checkbox'ları büyütüyoruz */
-  height: 20px; /* Yüksekliği de büyütüyoruz */
+  width: 20px; 
+  height: 20px; 
   font-family: 'Roboto Condensed', sans-serif;
 }
 
-/* 5. order-summary-row ve order-summary-col yan yana olacak */
+
 .order-summary-row {
-  display: flex; /* Öğeleri yatayda hizalamak için flexbox kullanıyoruz */
-  justify-content: space-between; /* Aralarındaki mesafeyi ayarlıyoruz */
+  display: flex; 
+  justify-content: space-between; 
   gap:50px;
   margin-top: 5rem;
   font-family: 'Roboto Condensed', sans-serif;
 }
 
 .order-summary-col {
-  display: inline-block; /* Yan yana yerleşecek */
-  width: 48%; /* Genişliklerini ayarlıyoruz */
+  display: inline-block; 
+  width: 48%; 
   font-family: 'Roboto Condensed', sans-serif;
 }
 button {
-  background-color: #FDC913; /* Sarı renk */
-  border: none; /* Kenarlık kaldırıldı */
-  border-radius: 10px; /* Yuvarlak köşeler */
-  height: 50px; /* Yükseklik */
-  width: 150px; /* Genişlik */
-  color: black; /* Yazı rengi siyah */
-  font-weight: bold; /* Kalın yazı */
-  font-family: 'Barlow', sans-serif; /* Yazı tipi */
-  font-size: 16px; /* Yazı boyutu */
-  cursor: pointer; /* Üzerine gelindiğinde işaretçi değişir */
-  transition: background-color 0.3s ease, opacity 0.3s ease; /* Geçiş efekti */
+  background-color: #FDC913;
+  border: none; 
+  border-radius: 10px; 
+  height: 50px; 
+  width: 150px; 
+  color: black; 
+  font-weight: bold; 
+  font-family: 'Barlow', sans-serif; 
+  font-size: 16px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease, opacity 0.3s ease; 
   font-family: 'Roboto Condensed', sans-serif;
 }
 
 /* Butona hover efekti ekleyelim */
 button:hover {
-  background-color: #CE2829; /* Kırmızı renk hover olduğunda */
-  color: white; /* Yazı rengi beyaz */
+  background-color: #CE2829; 
+  color: white; 
 }
 
-/* Buton devre dışı olduğunda (disabled) soluk sarı olur */
+
 button:disabled {
-  background-color: #FDC913; /* Sarı renk */
-  opacity: 0.6; /* Soluk gösterim */
-  cursor: not-allowed; /* Tıklanamaz hale gelir */
+  background-color: #FDC913; 
+  opacity: 0.6; 
+  cursor: not-allowed; 
 }
 .quantity-button{
-  background-color: #FDC913; /* Sarı renk */
-  border: none; /* Kenarlık kaldırıldı */
-  border-radius: 5px; /* Yuvarlak köşeler */
-  height: 50px; /* Yükseklik */
-  width: 50px; /* Genişlik */
-  color: black; /* Yazı rengi siyah */
-  font-weight: bold; /* Kalın yazı */
-  font-family: 'Barlow', sans-serif; /* Yazı tipi */
-  font-size: 16px; /* Yazı boyutu */
-  cursor: pointer; /* Üzerine gelindiğinde işaretçi değişir */
-  transition: background-color 0.3s ease, opacity 0.3s ease; /* Geçiş efekti */
+  background-color: #FDC913;
+  border: none; 
+  border-radius: 5px; 
+  height: 50px; 
+  width: 50px; 
+  color: black; 
+  font-weight: bold; 
+  font-family: 'Barlow', sans-serif;
+  font-size: 16px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease, opacity 0.3s ease; 
   font-family: 'Roboto Condensed', sans-serif;
 }
+.order-name {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.order-name label {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #292929;
+  margin-bottom: 5px;
+}
+
+.order-name input {
+  padding: 10px;
+  border: 1px solid #5F5F5F;
+  border-radius: 8px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 14px;
+  color: #292929;
+  background-color: #FAF7F2;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.order-name input:focus {
+  border-color: #FFB400;
+  box-shadow: 0 0 5px rgba(255, 180, 0, 0.5);
+  outline: none;
+}
+
 /* Sipariş notu kısmı */
 .order-note {
   margin-top: 20px;
@@ -247,16 +276,16 @@ button:disabled {
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 14px;
   color: #292929;
-  resize: vertical; /* Yalnızca dikeyde büyütülmesine izin verir */
+  resize: vertical; 
   min-height: 100px;
   max-height: 200px;
   background-color: #FAF7F2;
   transition: border-color 0.3s ease;
 }
 
-/* Hover veya focus durumunda textarea'nın kenarlığını renklendirme */
+
 .order-note textarea:focus {
-  border-color: white /* Sarı renk */
+  border-color: white 
 }
 
 .order-button{
@@ -342,12 +371,12 @@ button:disabled {
   display: flex;
   gap: 20px;
   margin: 20px 0;
-  height: 449px; /* Sol ve sağ tarafın toplam yüksekliği */
+  height: 449px; 
 }
 
 /* Sol taraf: Banner1 */
 .banner1 {
-  flex: 2; /* Sol taraf genişliği daha büyük olacak */
+  flex: 2; 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -476,7 +505,7 @@ button:disabled {
 .product-card p:last-child {
   font-size: 1rem;
   font-weight: bold;
-  color: #e63946;
+  color: #CE2829;
 }
 
 /* Acıktıran kod */
@@ -577,9 +606,9 @@ button:disabled {
 
 
 .success-page {
-  background-color: #CE2829; /* Kırmızı arka plan */
-  height: 100vh; /* Sayfanın tüm yüksekliğini kaplar */
-  color: white; /* Yazı rengini beyaz yapar */
+  background-color: #CE2829; 
+  height: 100vh; 
+  color: white; 
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -632,9 +661,9 @@ button:disabled {
   margin-top: 5rem;
 }
 
-/* Checkbox'ın normal durumu */
+
 .topping-checkbox {
-  appearance: none; /* Tarayıcı varsayılan stilini kaldırır */
+  appearance: none; 
   width: 20px;
   height: 20px;
   border: 2px solid #ccc;
@@ -645,16 +674,16 @@ button:disabled {
   position: relative;
 }
 
-/* Checkbox seçildiğinde */
+
 .topping-checkbox:checked {
-  background-color: #FDC913; /* Sarı arka plan */
+  background-color: #FDC913;
   border-color: #FDC913;
 }
 
-/* Checkbox seçildiğinde tik işareti */
+
 .topping-checkbox:checked::after {
-  content: '✔'; /* Tik işareti */
-  color: #000; /* Siyah tik */
+  content: '✔'; 
+  color: #000; 
   font-size: 16px;
   position: absolute;
   top: 50%;

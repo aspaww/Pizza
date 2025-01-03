@@ -1,7 +1,7 @@
 import React from 'react';
-import HomeHeader from './HomeHeader';
-import HomeContent from './HomeContent';
-import HomeFooter from './HomeFooter';
+import HomeHeader from '../home/HomeHeader';
+import HomeContent from '../home/HomeContent';
+import HomeFooter from '../home/HomeFooter';
 
 
 export default function HomePage(){
