@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from 'reactstrap';
 import { useNavigate } from 'react-router-dom'; 
 import homeBanner from '../../assets/home-banner.png'; 
-import '../../App.css'
+import './Home.css'
 
 export default function HomeHeader() {
   const navigate = useNavigate();

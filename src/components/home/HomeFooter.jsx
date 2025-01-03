@@ -1,5 +1,5 @@
 import React from "react";
-import "../../App.css";
+import "./Home.css";
 
 export default function HomeFooter() {
     return (
@@ -18,7 +18,7 @@ export default function HomeFooter() {
                             alt="Adres Icon" 
                             className="footer-icon"
                         />
-                        &nbsp; &nbsp; 341 Londonderry Road,<br /> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; İstanbul Türkiye
+                        &nbsp;&nbsp;341 Londonderry Road,<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;İstanbul Türkiye
                     </p>
                     <p>
                         <img 
@@ -26,7 +26,7 @@ export default function HomeFooter() {
                             alt="E-posta Icon" 
                             className="footer-icon"
                         />
-                        <a href="mailto:acikitim@teknolojikyemekler.com">&nbsp; &nbsp;  acikitim@teknolojikyemekler.com</a>
+                        <a href="mailto:acikitim@teknolojikyemekler.com">&nbsp; &nbsp;acikitim@teknolojikyemekler.com</a>
                     </p>
                     <p>
                         <img 
@@ -34,7 +34,7 @@ export default function HomeFooter() {
                             alt="Telefon Icon" 
                             className="footer-icon"
                         />
-                        <a href="tel:+902161234567"> &nbsp; &nbsp;+90 216 123 45 67</a>
+                        <a href="tel:+902161234567">&nbsp; &nbsp;  +90 216 123 45 67</a>
                     </p>
                 </div>
 
@@ -69,6 +69,7 @@ export default function HomeFooter() {
             {/* Alt Çizgi */}
             <div className="footer-bottom">
                 <p>© 2023 Teknolojik Yemekler.</p>
+
             </div>
         </footer>
     );

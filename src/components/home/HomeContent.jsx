@@ -1,5 +1,5 @@
 import React from "react";
-import '../../App.css'
+import './Home.css'
 
 // Images
 import kart1 from "../../../images/iteration-2-images/cta/kart-1.png";
@@ -47,13 +47,13 @@ const HomeContent = () => {
       </div>
 
       {/* Call-to-Action Banners Section */}
-      <div className="cta-banners">
+<div className="cta-banners">
   <div
     className="banner1"
-    style={{ backgroundImage: `url(${kart1})` }}
+    style={{ backgroundImage: `url(${kart1})`}}
   >
-    <h3>Özel Lezzetus</h3>
-    <p>Position: Absolute Acı Burger</p>
+    <h3>Özel <br/> Lezzetus</h3>
+    <p>Position: Absolute Acı Pizza</p>
     <button>Sipariş Ver</button>
   </div>
   <div className="right-banners">

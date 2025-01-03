@@ -1,6 +1,6 @@
 import React from 'react';
 import { FormGroup, Label, Input } from 'reactstrap';
-import '../../App.css';
+import './Order.css';
 
 
 const OrderToppings = ({ seciliMalzemeler, setSeciliMalzemeler }) => {

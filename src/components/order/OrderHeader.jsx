@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../App.css';
+import './Order.css';
 
 export default function OrderHeader() {
   return (

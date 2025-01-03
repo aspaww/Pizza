@@ -2,7 +2,7 @@ import React from 'react';
 import OrderHeader from './OrderHeader';
 import OrderDetails from './OrderDetails';
 import OrderFooter from './OrderFooter';
-import '../../App.css';
+import './Order.css';
 
 const OrderPage = () => {
   return (
