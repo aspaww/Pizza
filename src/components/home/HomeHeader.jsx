@@ -15,7 +15,7 @@ export default function HomeHeader() {
     <header className="header" style={{ backgroundImage: `url(${homeBanner})` }}>
       <div className="header-content">
         <h1>Teknolojik Yemekler</h1>
-        <p>KOD ACIKTIRIR,<br /> PİZZA DOYURUR</p>
+        <p>KOD ACIKTIRIR<br/> PİZZA, DOYURUR</p>
         <Button onClick={handleClick}>ACIKTIM</Button>
       </div>
     </header>

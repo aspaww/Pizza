@@ -1,0 +1,79 @@
+/* Succes Page    */
+.success-page {
+    background-color: #CE2829; 
+    height: 100vh; 
+    color: white; 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: "Barlow", serif;
+  }
+  
+  .success-page h1 {
+    font-family: "Roboto Condensed", serif;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 6rem;
+  }
+  .success-page h2{
+    font-family: 'Barlow', sans-serif;
+    font-size: 5rem;
+    font-weight:lighter;
+    margin-bottom: 20px;
+    margin-top: 6rem;
+  }
+  
+  .success-page-order {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .success-page hr{
+    width:50%;
+    margin-top: 5rem;
+    margin-bottom: 6rem;
+  }
+  
+  .succes-page-price{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-style: solid;
+    border-width:0.3px;
+    width: 25%;
+    margin-left: 38%;
+    margin-top: 5rem;
+  }
+  
+  .topping-checkbox {
+    appearance: none; 
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .topping-checkbox:checked {
+    background-color: #FDC913;
+    border-color: #FDC913;
+  }
+  
+  .topping-checkbox:checked::after {
+    content: '✔'; 
+    color: #000; 
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }

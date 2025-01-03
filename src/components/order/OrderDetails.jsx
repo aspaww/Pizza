@@ -12,6 +12,8 @@ import { useNavigate } from 'react-router-dom';  // navigate importu
 const OrderDetails = () => {
   const navigate = useNavigate();
   const {
+    isim,
+    setIsim,
     seciliBoyut,
     setSeciliBoyut,
     seciliHamur,
@@ -22,22 +24,20 @@ const OrderDetails = () => {
     siparisMiktari,
     siparisNotu,
     setSiparisNotu,
-    handleSiparisMiktariDegistir,
-    isim,
-    setIsim
+    handleSiparisMiktariDegistir
   } = useOrderDetails();
 
   const { isOrderButtonDisabled } = useOrderValidation(seciliBoyut, seciliHamur, seciliMalzemeler);
 
   const handleOrderSubmit = async () => {
     const orderData = {
+      isim,
       boyut: seciliBoyut,
       hamur: seciliHamur,
       malzemeler: seciliMalzemeler.join(", "),
       siparisMiktari,
       siparisNotu,
-      fiyat,
-      isim
+      fiyat
     };
   
     try {
