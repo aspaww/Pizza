@@ -691,6 +691,85 @@ button:disabled {
   transform: translate(-50%, -50%);
 }
 
+/* Footer Styles */
+.footer {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  margin-top: 5rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-contact,
+.footer-menu,
+.footer-instagram {
+  flex: 1 1 300px;
+  margin-left: 10rem;
+  margin-right: 7rem;
+}
+
+.footer-logo {
+  max-width: 150px;
+  margin-bottom: 20px;
+}
+
+.footer-contact p,
+.footer-contact a {
+  margin: 5px 0;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-menu h4,
+.footer-instagram h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #f4c04e;
+}
+
+.footer-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-menu li {
+  margin: 5px 0;
+}
+
+.footer-instagram .instagram-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.footer-instagram img {
+  width: 50%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+}
+
+.footer-bottom p {
+  margin: 5px 0;
+}
+
+.footer-icon {
+  max-width: 30px;
+  margin-top: 10px;
+}
 
 
 
