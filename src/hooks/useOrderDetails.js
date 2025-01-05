@@ -1,8 +1,7 @@
 import { useState } from 'react';
 
 const useOrderDetails = () => {
-  // Boyut, Hamur, ve Malzeme seçeneklerinin state'leri
-  const [seciliBoyut, setSeciliBoyut] = useState('Orta'); 
+  const [seciliBoyut, setSeciliBoyut] = useState(''); 
   const [seciliHamur, setSeciliHamur] = useState('İnce'); 
   const [seciliMalzemeler, setSeciliMalzemeler] = useState([]);
   const [siparisMiktari, setSiparisMiktari] = useState(1);
@@ -12,9 +11,9 @@ const useOrderDetails = () => {
 
   const fiyatlar = {
     boyutlar: {
-      Küçük: 25,
-      Orta: 35,
-      Büyük: 45
+      S: 25,
+      M: 35,
+      L: 45
     },
     hamurlar: {
       İnce: 5,
@@ -25,7 +24,7 @@ const useOrderDetails = () => {
   };
 
 
-  const fiyat = (fiyatlar.boyutlar[seciliBoyut] || 0) 
+  const fiyat = 40 (fiyatlar.boyutlar[seciliBoyut] || 0) 
                + (fiyatlar.hamurlar[seciliHamur] || 0)
                + (seciliMalzemeler.length * fiyatlar.ekMalzeme); 
 
