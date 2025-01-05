@@ -6,7 +6,7 @@ const OrderSize = ({ seciliBoyut, setSeciliBoyut }) => {
     <FormGroup tag="fieldset" className="order-size-fieldset">
       <legend className="order-size-legend">Boyut Seç *</legend>
       <Row className="order-size-options">
-        {['Küçük', 'Orta', 'Büyük'].map((boyutSecenek, index) => (
+        {['S', 'M', 'L'].map((boyutSecenek, index) => (
           <Col key={index} className="order-size-option">
             <FormGroup check>
               <Label check>

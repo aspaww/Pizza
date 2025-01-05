@@ -19,7 +19,7 @@ const OrderToppings = ({ seciliMalzemeler, setSeciliMalzemeler }) => {
   return (
     <FormGroup className="order-toppings">
       <legend className="order-toppings-legend">Ek Malzemeler</legend>
-      <p>En Fazla 10 Malzeme Seçebilirsiniz.</p>
+      <p>En Fazla 10 Malzeme Seçebilirsiniz. Her biri 5 TL</p>
       <div className="toppings-options">
         {malzemeListesi.map((malzeme, index) => (
           <FormGroup check key={index} className="topping-option">

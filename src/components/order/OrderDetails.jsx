@@ -52,12 +52,20 @@ const OrderDetails = () => {
   };
 
   return (
+    
     <div className="order-details">
+      <div className='order-pizza-banner'>
+        <img 
+          src="/images/iteration-2-images/pictures/form-banner.png" 
+          alt="Pizza Banner" 
+          className="pizza-banner" 
+        />
+      </div>  
       <div className="pizza-info">
         <div className="pizza-name">Position Absolute Acı pizza</div>
         <div className="pizza-price">{fiyat} TL</div>
         <div className="pizza-description">
-          Frontend Dev olarak hala position: absolute kullanıyorsan bu çok acı pizza tam sana göre.
+          Frontend Dev olarak hala position:absolute kullanıyorsan bu çok acı pizza tam sana göre.Pizza,domates,peynir ve genellikle çeşitli diğer malzemelerle kaplanmış,daha sonra geleneksel olarak odun ateşinde bir fırında yüksek sıcaklıkta pişirilen, genellikle yuvarlak, düzleştirilmiş mayalı buğday bazlı hamurdan oluşan italyan kökenli lezzetli bir yemektir. Küçük bir pizzaya bazen pizzetta denir
         </div>
       </div>
 
@@ -95,7 +103,6 @@ const OrderDetails = () => {
         siparisMiktari={siparisMiktari}
         handleSiparisMiktariDegistir={handleSiparisMiktariDegistir}
       />
-
       <Button
         type="button"
         className="order-button"
