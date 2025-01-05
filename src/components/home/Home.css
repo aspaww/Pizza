@@ -30,7 +30,7 @@
     font-style: normal;
     font-size: 80px;
     margin-bottom: 0px; 
-    margin-top: 3rem;
+    margin-top: 0.1rem;
   }
   
   .header-content Button {
@@ -40,7 +40,7 @@
     width: 150px;
     color: black;
     font-weight: bold;
-    margin-top: 2rem; 
+    margin-top: 1.5rem; 
   }
 
 
@@ -95,7 +95,7 @@
   }
   
   .category.active {
-    color: #e63946;
+    color: #CE2829;
   }
   
   .category.active img {
@@ -249,6 +249,21 @@
   .featured-products {
     text-align: center;
     margin: 20px 0;
+    margin-top: 5rem;
+  }
+  .satisfy {
+    font-family: "Satisfy", serif;
+    font-weight: 400;
+    font-style: normal;
+    color:#CE2829;
+
+  }
+  .satisfy-header {
+    font-family: "Satisfy", serif;
+    font-weight: 400;
+    font-style: normal;
+    color:#FDC913;
+
   }
   
   .featured-products h2 {

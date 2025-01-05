@@ -76,6 +76,7 @@ const HomeContent = () => {
 
   {/* Featured Products Section */}
   <div className="featured-products">
+    <h1 className="satisfy"> en çok paketlenen menüler</h1>
     <h2>Acıktıran Kodlara Doyuran Lezzetler</h2>
 
     {/* Categories Section */}
