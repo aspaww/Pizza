@@ -24,7 +24,7 @@ const useOrderDetails = () => {
   };
 
 
-  const fiyat = 40 (fiyatlar.boyutlar[seciliBoyut] || 0) 
+  const fiyat = 40 +(fiyatlar.boyutlar[seciliBoyut] || 0) 
                + (fiyatlar.hamurlar[seciliHamur] || 0)
                + (seciliMalzemeler.length * fiyatlar.ekMalzeme); 
 
